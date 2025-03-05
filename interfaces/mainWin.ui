@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>495</width>
+    <height>285</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>495</width>
+    <height>285</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>495</width>
+    <height>285</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+    <pointsize>9</pointsize>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Convertidor de Imagenes</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resources.qrc">
+    <normaloff>:/icon/avatar_2.png</normaloff>:/icon/avatar_2.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushBuscar">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="statusTip">
+     <string>Buscar imagen</string>
+    </property>
+    <property name="text">
+     <string>Buscar archivo</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushIco">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="statusTip">
+     <string>Generar icono</string>
+    </property>
+    <property name="text">
+     <string>Convertir a ICO</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushWebp">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>151</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="statusTip">
+     <string>transformar webp a jpg y png</string>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LayoutDirection::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string>Convertir de Webp
+a PNG y JPEG</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushRed">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="statusTip">
+     <string>cambiar tamaño</string>
+    </property>
+    <property name="text">
+     <string>Redimensionar</string>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>185</x>
+      <y>60</y>
+      <width>291</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="statusTip">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushSalir">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="statusTip">
+     <string>salir</string>
+    </property>
+    <property name="text">
+     <string>Salir</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>20</y>
+      <width>281</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="statusTip">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
