@@ -3,6 +3,7 @@
 # v1.1 - August 9th 2024 -- Adding convertWebp function
 # v1.2 - March  3rd 2025 -- Adding resizeImage function
 # v2.0 - March  5th 2025 -- Change to Qt for GUI. Major update. Qt designer used to build GUI
+# v2.1 - March  6th 2025 -- Changing default directory to open.
 
 from PySide6.QtWidgets import (QApplication, QMainWindow, QFileDialog, QMessageBox, QGraphicsPixmapItem,
                                QGraphicsScene, QWidget)
@@ -120,7 +121,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def abrirf(self):
         # Obtén el archivo seleccionado
-        file_name, _ = QFileDialog.getOpenFileName(self, "Buscar", "/", "*.png *.jpg *.webp *.jpeg")
+        # file_name, _ = QFileDialog.getOpenFileName(self, caption="Buscar", dir="/", filter="*.png *.jpg *.webp *.jpeg")
+        file_name, _ = QFileDialog.getOpenFileName(self, caption="Buscar",
+                                                   dir=str(Path.home()/'Pictures' if Path.home()/'Pictures' else Path.home()),
+                                                   filter="*.png *.jpg *.webp *.jpeg")
         if file_name:
             # Actualiza el QLineEdit con la ruta seleccionada
             self.lineEdit.setText(file_name)
@@ -193,7 +197,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             QMessageBox.information(self, "Éxito", "Conversión a ICO completada")
             self.openNewImage(imagec)
         except Exception  as e:
-            QMessageBox.critical(self, "Error", f"Formato no soportado.\n\n{str(e)}")
+            QMessageBox.critical(self, "Error", f"{str(e)}")
 
     def convertWebp(self):
         try:
